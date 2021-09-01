@@ -10,6 +10,8 @@ request('https://www.olx.pl/nieruchomosci/dzialki/sprzedaz/sejny/?search%5Bdist%
         const $ = cheerio.load(html);
         const postTitles = [];
         const postLinks = [];
+        const postImgs = [];
+        const postPrices = [];
 
         $('h3 > a > strong').each((i, el) => {
             const postTitle = $(el).text()
@@ -21,9 +23,17 @@ request('https://www.olx.pl/nieruchomosci/dzialki/sprzedaz/sejny/?search%5Bdist%
             const postLink = $(el).attr('href');
             postLinks.push(postLink);
         })
-        console.log(postTitles,postLinks);
 
+        $('img').each((i,el)=>{
+            const postImg = $(el).attr('src');
+            postImgs.push(postImg);
+        })
 
+        $('.price > strong').each((i,el)=>{
+            const postPrice = $(el).text();
+            postPrices.push(postPrice);
+        })
+        console.log(postTitles,postLinks,postImgs,postPrices);
 
     }
 });
