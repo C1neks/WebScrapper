@@ -26,13 +26,14 @@ request('https://www.olx.pl/nieruchomosci/dzialki/sprzedaz/sejny/?search%5Bdist%
         // const postImgs = [];
         // const postPrices = [];
 
-        function Post(title,link,img,price){
-            this.title = title;
-            this.link = link;
-            this.img = img;
-            this.price = price;
+        class Post {
+            constructor(title, link, img, price) {
+                this.title = title;
+                this.link = link;
+                this.img = img;
+                this.price = price;
+            }
         }
-
         // const posts = {
         //     title: String,
         //     link: String,
