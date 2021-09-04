@@ -1,6 +1,7 @@
 const request = require('request');
 const cheerio = require('cheerio');
 const fs = require('fs');
+const descriptionSearch = require('./app2')
 
 const data = JSON.parse(fs.readFileSync('results.json'));
 
@@ -60,13 +61,14 @@ request('https://www.olx.pl/nieruchomosci/dzialki/sprzedaz/sejny/?search%5Bdist%
         //     postPrices.push(postPrice);
         // })
         // console.log(postTitles,postLinks,postImgs,postPrices);
-        $('.offer-wrapper').each((i,el)=>{
+        $('.offer-wrapper').each((i, el)=>{
             const title = $(el)
                 .find('h3 > a > strong')
                 .text();
             const link = $(el)
                 .find('.photo-cell > a')
                 .attr('href');
+                console.log(link)
             const img = $(el)
                 .find('img')
                 .attr('src');
@@ -75,7 +77,9 @@ request('https://www.olx.pl/nieruchomosci/dzialki/sprzedaz/sejny/?search%5Bdist%
                 .text()
                 .replace(/ /g,'');
             let price = parseInt(priceInString);
-            console.log(title,link,img,price);
+            // console.log(title,link,img,price);
+            descriptionSearch(link);
+
 
 
 
