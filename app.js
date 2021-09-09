@@ -1,103 +1,132 @@
-const request = require('request');
 const cheerio = require('cheerio');
 const fs = require('fs');
-const descriptionSearch = require('./app2')
+const {default: axios} = require('axios');
+const {getHtml} = require('./app2');
+const {html} = require('cheerio/lib/api/manipulation');
+const {title} = require('process');
+const links = [];
+const titles = [];
 
-const data = JSON.parse(fs.readFileSync('results.json'));
 
-const saveData = (data,file) => {
-    const finished = (error) => {
-        if(error){
-            console.error(error)
-            return;
-        }
+const Scrapper = () => {
+
+    let data;
+    try {
+        data = JSON.parse(fs.readFileSync('results.json'));
+    } catch (err) {
+        console.log("File not found!");
     }
-    const jsonData = JSON.stringify(data,null,2)
-    fs.writeFile(file,jsonData,finished)
-    console.log('saved')
-}
 
 
-request('https://www.olx.pl/nieruchomosci/dzialki/sprzedaz/sejny/?search%5Bdist%5D=10)',
-    (error,response, html) => {
-    if(!error && response.statusCode ==200) {
-        const $ = cheerio.load(html);
-        // const postTitles = [];
-        // const postLinks = [];
-        // const postImgs = [];
-        // const postPrices = [];
+    const SELECTORS = {
+        wrapper: '.offer-wrapper',
+        head: 'h3 > a > strong',
+        link: '.photo-cell > a',
+        img: 'img',
+        price: '.price > strong',
+        title: '[data-cy="ad_title"]',
+        description: '[data-cy="ad_description"] div',
+        area: 'li:nth-last-of-type(2) > p'
+    }
 
-        class Post {
-            constructor(title, link, img, price) {
-                this.title = title;
-                this.link = link;
-                this.img = img;
-                this.price = price;
+    const saveData = (data, file) => {
+        const finished = (error) => {
+            if (error) {
+                console.error(error)
+                return;
             }
         }
-        // const posts = {
-        //     title: String,
-        //     link: String,
-        // }
 
-        // $('h3 > a > strong').each((i, el) => {
-        //     const postTitle = $(el).text()
-        //     postTitles.push(postTitle)
-        //
-        // });
-        //
-        // $('.photo-cell > a').each((i,el)=>{
-        //     const postLink = $(el).attr('href');
-        //     postLinks.push(postLink);
-        // })
-        //
-        // $('img').each((i,el)=>{
-        //     const postImg = $(el).attr('src');
-        //     postImgs.push(postImg);
-        // })
-        //
-        // $('.price > strong').each((i,el)=>{
-        //     const postPrice = $(el).text();
-        //     postPrices.push(postPrice);
-        // })
-        // console.log(postTitles,postLinks,postImgs,postPrices);
-        $('.offer-wrapper').each((i, el)=>{
-            const title = $(el)
-                .find('h3 > a > strong')
-                .text();
+        const jsonData = JSON.stringify(data, null, 2)
+        fs.writeFile(file, jsonData, finished)
+        console.log('saved')
+    }
+
+    class Post {
+        constructor(title, link, img, price) {
+            this.title = title;
+            this.link = link;
+            this.img = img;
+            this.price = price;
+        }
+    }
+
+    const saveOffer = async (title, link, img, price) => {
+
+        let newOffer = await new Post(title, link, img, price)
+        data[newOffer.link] = newOffer
+        saveData(data, 'results.json')
+    }
+
+
+    const getData = async () => {
+
+        const html = await getHtml('https://www.olx.pl/nieruchomosci/dzialki/sprzedaz/sejny/?search%5Bdist%5D=10)');
+        const $ = cheerio.load(html);
+
+        $(SELECTORS.wrapper).each((i, el) => {
             const link = $(el)
-                .find('.photo-cell > a')
+                .find(SELECTORS.link)
                 .attr('href');
-                console.log(link)
+            links.push(link)
+            const head = $(el)
+                .find(SELECTORS.head)
+                .text();
+            //  console.log(link)
             const img = $(el)
-                .find('img')
+                .find(SELECTORS.img)
                 .attr('src');
             const priceInString = $(el)
-                .find('.price > strong')
+                .find(SELECTORS.price)
                 .text()
-                .replace(/ /g,'');
+                .replace(/ /g, '');
             let price = parseInt(priceInString);
-            // console.log(title,link,img,price);
-            descriptionSearch(link);
+            // console.log(head,link,img,price);
+            saveOffer(head, link, img, price)
+        })
+        return links
+    }
 
+    const getTitle = async () => {
+        const links = await getData()
+        links.forEach((index) => {
 
+            const html = getHtml(index);
+            const $ = cheerio.load(html);
 
+            $(SELECTORS.title).each((i, el) => {
+                const title = $(el)
+                    .text();
+                titles.push(title)
+                console.log(title)
+            });
 
-            const saveOffer = (title,link,img,price) => {
+            $(SELECTORS.description).each((i, el) => {
+                const description = $(el)
+                    .text()
+                console.log(description)
+            })
 
-                let newOffer = new Post(title,link,img,price)
-                data[newOffer.title] = newOffer
-                saveData(data,'results.json')
-            }
-            saveOffer(title,link,img,price)
+            $('.css-sfcl1s').each((i, el) => {
+                let areaInString = $(el)
+                    .find(SELECTORS.area)
+                    .text()
+                    .replace(/ /g, '');
+                let area = parseInt(areaInString)
+                console.log(area);
+
+            })
+
         })
 
-
+        return titles
     }
-});
+    getTitle()
+    getData()
 
+}
 
-
+Scrapper()
 
 
 
