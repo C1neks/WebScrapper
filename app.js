@@ -6,7 +6,7 @@ const {html} = require('cheerio/lib/api/manipulation');
 const {title} = require('process');
 const links = [];
 const titles = [];
-
+const baseUrl = 'https://www.olx.pl/nieruchomosci/dzialki/sprzedaz/sejny/?search%5Bdist%5D=10)';
 
 const Scrapper = () => {
 
@@ -61,13 +61,13 @@ const Scrapper = () => {
 
     const getData = async () => {
 
-        const html = await getHtml('https://www.olx.pl/nieruchomosci/dzialki/sprzedaz/sejny/?search%5Bdist%5D=10)');
+        const html = await getHtml(baseUrl);
         const $ = cheerio.load(html);
 
         $(SELECTORS.wrapper).each((i, el) => {
             const link = $(el)
                 .find(SELECTORS.link)
-                .attr('href');
+                .attr('href')
             links.push(link)
             const head = $(el)
                 .find(SELECTORS.head)
@@ -88,12 +88,13 @@ const Scrapper = () => {
     }
 
     const getTitle = async () => {
-        const links = await getData()
-        links.forEach((index) => {
+        const urls = await getData()
+
+        urls.forEach((index) => {
 
             const html = getHtml(index);
             const $ = cheerio.load(html);
-
+            console.log(index)
             $(SELECTORS.title).each((i, el) => {
                 const title = $(el)
                     .text();
@@ -119,10 +120,11 @@ const Scrapper = () => {
 
         })
 
+        console.log(urls)
         return titles
     }
     getTitle()
-    getData()
+    // getData()
 
 }
 
