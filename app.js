@@ -15,6 +15,7 @@ const Scrapper = async () => {
     let descriptions = [];
     let areas = [];
     let units = [];
+    let priceForMeters = [];
 
     let data;
     try {
@@ -67,12 +68,12 @@ const Scrapper = async () => {
     //     data[newOffer.link] = newOffer
     //     saveData(data, 'results.json')
     // }
-        const saveOffer = async (result) => {
-            result.forEach(index => {
-                data[result.link] = result
-                saveData(data,'results.json')
-            })
-        }
+    const saveOffer = async (result) => {
+        result.forEach(index => {
+            data["Offers"] = result
+            saveData(data, 'results.json')
+        })
+    }
 
     const getOfferLinks = async () => {
 
@@ -95,56 +96,101 @@ const Scrapper = async () => {
 
             const html = await getHtml(index);
             const $ = cheerio.load(html);
-            console.log(index)
-            $(SELECTORS.title).each((i, el) => {
-                const title = $(el)
-                    .text()
-                titles = [...titles, title]
+            // console.log(index)
 
-            });
-
-            $('[data-testid=ad-price-container] > h3').each((i, el) => {
-                const priceInString = $(el)
-                    .text()
-                    .replace(/ /g, '');
-                let price = parseInt(priceInString)
-                let currency = priceInString.slice(-2)
-                prices = [...prices,price]
-                currencies = [...currencies,currency]
-                // console.log(price);
-                // console.log(currency);
-            })
-            $('.swiper-zoom-container').each((i, el) => {
-                const img = $(el)
-                    .find(SELECTORS.img)
-                    .attr('src')
-                imgs = [...imgs,img]
-                // console.log(img)
-            })
-            $(SELECTORS.description).each((i, el) => {
-                const description = $(el)
-                    .text()
-                descriptions = [...descriptions,description]
-                // console.log(description)
-            })
-
-            $('.css-sfcl1s').each((i, el) => {
-                let areaInString = $(el)
-                    .find(SELECTORS.area)
-                    .text()
-                    .replace(/\D/g, "");
-                let area = parseInt(areaInString)
-                areas = [...areas,area]
-                // console.log(areaInString);
-                let priceForMeter = $(el)
-                    .find(SELECTORS.unit)
-                    .text()
-                let unit = priceForMeter.slice(-2)
-                units = [...units,unit]
-
-            })
+            if (index.includes("otodom")) {
+                $('[data-cy="adPageAdTitle"]').each((i, el) => {
+                    const title = $(el)
+                        .text()
+                    titles = [...titles, title]
+                })
+                $('[aria-label="Cena"]').each((i, el) => {
+                    const priceInString = $(el)
+                        .text()
+                        .replace(/ /g, '');
+                    let price = parseInt(priceInString)
+                    let currency = priceInString.slice(-2)
+                    prices = [...prices, price]
+                    currencies = [...currencies, currency]
+                })
+                $('div > picture').each((i, el) => {
+                    const img = $(el)
+                        .find(SELECTORS.img)
+                        .attr('src')
+                    imgs = [...imgs, img]
+                    // console.log(img)
+                })
+                $('[data-cy="adPageAdDescription"]').each((i, el) => {
+                    const description = $(el)
+                        .text()
+                    descriptions = [...descriptions, description]
+                })
+                $('div > [aria-label="Powierzchnia"] > .css-1ytkscc').each((i, el) => {
+                    const areaInString = $(el)
+                        .text()
+                        .replace(/\D/g, "");
+                    let area = parseInt(areaInString)
+                    areas = [...areas, area]
+                    const unitInString = $(el)
+                        .text()
+                    let unit = unitInString.slice(-2)
+                    units = [...units, unit]
+                })
 
 
+                // console.log("otodom")
+            } else {
+                $(SELECTORS.title).each((i, el) => {
+                    const title = $(el)
+                        .text()
+                    titles = [...titles, title]
+
+                });
+
+                $('[data-testid=ad-price-container] > h3').each((i, el) => {
+                    const priceInString = $(el)
+                        .text()
+                        .replace(/ /g, '');
+                    let price = parseInt(priceInString)
+                    let currency = priceInString.slice(-2)
+                    prices = [...prices, price]
+                    currencies = [...currencies, currency]
+                    // console.log(price);
+                    // console.log(currency);
+                })
+                $('div > .swiper-container').each((i, el) => {
+                    const img = $(el)
+                        .find(SELECTORS.img)
+                        .attr('src')
+                    imgs = [...imgs, img]
+                    // console.log(img)
+                })
+                $(SELECTORS.description).each((i, el) => {
+                    const description = $(el)
+                        .text()
+                    descriptions = [...descriptions, description]
+                    // console.log(description)
+                })
+
+                $('.css-sfcl1s').each((i, el) => {
+                    let areaInString = $(el)
+                        .find(SELECTORS.area)
+                        .text()
+                        .replace(/\D/g, "");
+                    let area = parseInt(areaInString)
+                    areas = [...areas, area]
+                    // console.log(areaInString);
+                    let priceForMeter = $(el)
+                        .find(SELECTORS.unit)
+                        .text()
+                    priceForMeters = [...priceForMeters, priceForMeter]
+                    let unit = priceForMeter.slice(-2)
+                    units = [...units, unit]
+
+                })
+
+
+            }
         }
         // console.log(titles,prices,currencies,imgs,descriptions,areas)
 
@@ -153,7 +199,7 @@ const Scrapper = async () => {
     }
     await getTitle()
     getOfferLinks()
-    let result = links.map((id,index) => {
+    let result = links.map((id, index) => {
         return {
             link: id,
             title: titles[index],
