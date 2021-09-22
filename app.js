@@ -25,7 +25,7 @@ const Scrapper = async () => {
     }
 
 
-    const SELECTORS = {
+    const SELECTORS_OLX = {
         wrapper: '.offer-wrapper',
         head: 'h3 > a > strong',
         link: '.photo-cell > a',
@@ -35,6 +35,14 @@ const Scrapper = async () => {
         description: '[data-cy="ad_description"] div',
         area: 'li:nth-last-of-type(2) > p',
         unit: 'li:nth-last-of-type(1) > p'
+    }
+
+    const SELECTORS_OTODOM = {
+        title: '[data-cy="adPageAdTitle"]',
+        price: '[aria-label="Cena"]',
+        img: 'div > picture',
+        description: '[data-cy="adPageAdDescription"]',
+        area: 'div > [aria-label="Powierzchnia"] > .css-1ytkscc'
     }
 
     const saveData = (data, file) => {
@@ -50,24 +58,7 @@ const Scrapper = async () => {
         console.log('saved')
     }
 
-    // class Post {
-    //     constructor(link,title,price ,currency, img, description, area) {
-    //         this.title = title;
-    //         this.link = link;
-    //         this.img = img;
-    //         this.price = price;
-    //         this.currency = currency;
-    //         this.description = description;
-    //         this.area = area;
-    //     }
-    // }
 
-    // const saveOffer = async (title, link, img, price) => {
-    //
-    //     let newOffer = await new Post(title, link, img, price)
-    //     data[newOffer.link] = newOffer
-    //     saveData(data, 'results.json')
-    // }
     const saveOffer = async (result) => {
         result.forEach(index => {
             data["Offers"] = result
@@ -80,16 +71,16 @@ const Scrapper = async () => {
         const html = await getHtml(baseUrl);
         const $ = cheerio.load(html);
 
-        $(SELECTORS.wrapper).each((i, el) => {
+        $(SELECTORS_OLX.wrapper).each((i, el) => {
             const link = $(el)
-                .find(SELECTORS.link)
+                .find(SELECTORS_OLX.link)
                 .attr('href')
             links = [...links, link]
         })
         return links
     }
 
-    const getTitle = async () => {
+    const getOfferDetails = async () => {
         const urls = await getOfferLinks()
 
         for (const index of urls) {
@@ -99,12 +90,12 @@ const Scrapper = async () => {
             // console.log(index)
 
             if (index.includes("otodom")) {
-                $('[data-cy="adPageAdTitle"]').each((i, el) => {
+                $(SELECTORS_OTODOM.title).each((i, el) => {
                     const title = $(el)
                         .text()
                     titles = [...titles, title]
                 })
-                $('[aria-label="Cena"]').each((i, el) => {
+                $(SELECTORS_OTODOM.price).each((i, el) => {
                     const priceInString = $(el)
                         .text()
                         .replace(/ /g, '');
@@ -113,19 +104,19 @@ const Scrapper = async () => {
                     prices = [...prices, price]
                     currencies = [...currencies, currency]
                 })
-                $('div > picture').each((i, el) => {
+                $(SELECTORS_OTODOM.img).each((i, el) => {
                     const img = $(el)
-                        .find(SELECTORS.img)
+                        .find(SELECTORS_OLX.img)
                         .attr('src')
                     imgs = [...imgs, img]
                     // console.log(img)
                 })
-                $('[data-cy="adPageAdDescription"]').each((i, el) => {
+                $(SELECTORS_OTODOM.description).each((i, el) => {
                     const description = $(el)
                         .text()
                     descriptions = [...descriptions, description]
                 })
-                $('div > [aria-label="Powierzchnia"] > .css-1ytkscc').each((i, el) => {
+                $(SELECTORS_OTODOM.area).each((i, el) => {
                     const areaInString = $(el)
                         .text()
                         .replace(/\D/g, "");
@@ -140,7 +131,7 @@ const Scrapper = async () => {
 
                 // console.log("otodom")
             } else {
-                $(SELECTORS.title).each((i, el) => {
+                $(SELECTORS_OLX.title).each((i, el) => {
                     const title = $(el)
                         .text()
                     titles = [...titles, title]
@@ -160,12 +151,12 @@ const Scrapper = async () => {
                 })
                 $('div > .swiper-container').each((i, el) => {
                     const img = $(el)
-                        .find(SELECTORS.img)
+                        .find(SELECTORS_OLX.img)
                         .attr('src')
                     imgs = [...imgs, img]
                     // console.log(img)
                 })
-                $(SELECTORS.description).each((i, el) => {
+                $(SELECTORS_OLX.description).each((i, el) => {
                     const description = $(el)
                         .text()
                     descriptions = [...descriptions, description]
@@ -174,14 +165,14 @@ const Scrapper = async () => {
 
                 $('.css-sfcl1s').each((i, el) => {
                     let areaInString = $(el)
-                        .find(SELECTORS.area)
+                        .find(SELECTORS_OLX.area)
                         .text()
                         .replace(/\D/g, "");
                     let area = parseInt(areaInString)
                     areas = [...areas, area]
                     // console.log(areaInString);
                     let priceForMeter = $(el)
-                        .find(SELECTORS.unit)
+                        .find(SELECTORS_OLX.unit)
                         .text()
                     priceForMeters = [...priceForMeters, priceForMeter]
                     let unit = priceForMeter.slice(-2)
@@ -192,26 +183,28 @@ const Scrapper = async () => {
 
             }
         }
-        // console.log(titles,prices,currencies,imgs,descriptions,areas)
 
-        // console.log(urls)
-        // return titles
+
+
     }
-    await getTitle()
-    getOfferLinks()
-    let result = links.map((id, index) => {
-        return {
-            link: id,
-            title: titles[index],
-            price: prices[index],
-            currency: currencies[index],
-            img: imgs[index],
-            description: descriptions[index],
-            area: areas[index],
-            unit: units[index]
+    await getOfferDetails()
 
-        }
-    });
+
+        let result = links.map((id, index) => {
+            return {
+                link: id,
+                title: titles[index],
+                price: prices[index],
+                currency: currencies[index],
+                img: imgs[index],
+                description: descriptions[index],
+                area: areas[index],
+                unit: units[index]
+
+            }
+        });
+
+
     await saveOffer(result)
 
 }
