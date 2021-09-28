@@ -74,35 +74,28 @@ const Scrapper = async () => {
     });
     return links;
   };
-  const getOfferDetails = async () => {
-    const urls = await getOfferLinks();
-    let array = [];
-    for (const url of urls) {
-      const html = await getHtml(url);
-      const $ = cheerio.load(html);
-      // Promise.all
-      const SELECTORS = url.includes("otodom")
-        ? SELECTORS_OTODOM
-        : SELECTORS_OLX;
-      const title = $(SELECTORS.title).text();
-      const priceInString = $(SELECTORS.price).text().replace(/ /g, "");
-      const price = parseInt(priceInString);
-      const currency = priceInString.slice(-2);
-      const img = $(SELECTORS.img).attr("src");
-      const description = $(SELECTORS.description).text();
-      const area = parseInt($(SELECTORS.area).text().replace(/\D/g, ""));
-      const unit = $(SELECTORS.area).text().slice(-2);
-      array = [
-        ...array,
-        { link: url, title, price, currency, img, description, area, unit },
-      ];
-    }
-    return array;
+  const urls = await getOfferLinks();
+
+  const getOfferDetails = async (url) => {
+    const html = await getHtml(url);
+    const $ = cheerio.load(html);
+    // Promise.all
+    const SELECTORS = url.includes("otodom") ? SELECTORS_OTODOM : SELECTORS_OLX;
+    const title = $(SELECTORS.title).text();
+    const priceInString = $(SELECTORS.price).text().replace(/ /g, "");
+    const price = parseInt(priceInString);
+    const currency = priceInString.slice(-2);
+    const img = $(SELECTORS.img).attr("src");
+    const description = $(SELECTORS.description).text();
+    const area = parseInt($(SELECTORS.area).text().replace(/\D/g, ""));
+    const unit = $(SELECTORS.area).text().slice(-2);
+    return { link: url, title, price, currency, img, description, area, unit };
   };
-
-  const result = await getOfferDetails();
-  console.log(result);
-
+  const getAllOffers = async (urls) => {
+    const requests = urls.map((url) => getOfferDetails(url));
+    return Promise.all(requests);
+  };
+  const result = await getAllOffers(urls);
   await saveOffer(result);
 };
 
