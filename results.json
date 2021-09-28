@@ -1,87 +1,27 @@
 {
   "Offers": [
     {
-      "title": "Żegary gm. Sejny. Działka budowlana z linia brzegową",
-      "price": 410000,
+      "link": "https://www.otodom.pl/pl/oferta/krasnopol-dzialka-kolo-jeziora-ID4dbgg.html?",
+      "title": "Krasnopol - działka koło jeziora",
+      "price": 95000,
       "currency": "zł",
-      "img": "https://ireland.apollo.olxcdn.com:443/v1/files/7xlpjas7g6k23-PL/image;s=1024x768",
-      "description": "Przepiękna działka budowlana w miejscowości Żegary nad jeziorem Sztabinki. \nDziałka posiada własną linię brzegową.\nPołozona miedzy dwoma jeziorami. \nDo j. Gaładuś 100m.\nZostala wyrównana i posiana trawa. \nDziałka przy drodze asfaltowej, w ktorej znajduje się wodociag oraz prąd. \nZgodnie z planem zagospodarowania możliwosc budowy domu, siedliska. \n\nDziałka sklada sie z trzech połaczonych ze soba działek co widać na mapie.\nZdjecia jeziora z lotu ptaka rowniez załaczone.\n\nWielkośc działki 4241m2.\n\nDo miejscowości Sejny 6km, do przejścia granicznego Ogrodniki 3km.\n\nZachęcam do obejrzenia.",
-      "area": 4241,
+      "img": "https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImszY2c3dHh6enB3azMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.6uHTU59_gggisYThkt65rEy6dA4P7PjYxAIWwEY47XA/image;s=1280x1024;q=80",
+      "description": "Na sprzedaż działka o powierzchni 3400 m2, położona tuż obok Jeziora Boczniel, w miejscowości Czarna Buchta.\nDziałka w kształcie regularnego prostokąta.\nMożliwość uzyskania warunków zabudowy (na życzenie, przy zakupie nieruchomości właściciel przedkłada warunki zabudowy dla nowego nabywcy).\nW odległości około 200 m plaża gminna.\nDoprowadzona sieć elektroenergetyczna.\nZałożona księga wieczysta.",
+      "area": 3400,
       "unit": "m²"
     },
     {
-      "title": "Krasnopol - działki przy lesie i jeziorze",
-      "price": 79000,
+      "link": "https://www.otodom.pl/pl/oferta/dzialka-budowlana-w-berzalowcach-gm-sejny-ID4duD9.html?",
+      "title": "Działka budowlana w Berżałowcach gm. Sejny",
+      "price": 49000,
       "currency": "zł",
-      "img": "https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImxvcXliYXNpemczNjMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.z8jqFBUF1MbTPt8RXA2i3pem1lN0vFRcgBexzh9dnZ4/image;s=1280x1024;q=80",
-      "description": "Na sprzedaż siedem działek o powierzchni 3000 m2 każda, położone koło jeziora w gminie Krasnopol. Nieruchomości w kształcie prostokątów, położone tuż przy lesie.\nNabywca działki pierwszej dodatkowo w cenie otrzymuje działkę leśną o powierzchni 1100 m2.\nZ kompleksu do plaży gminnej nad jeziorem około 100 m.\nTeren działek równy, wzdłuż drogi dojazdowej przebiega sieć elektroenergetyczna.\nW okolicy dominuje luźna zabudowa siedliskowa, nad jeziorami rekreacyjna.\nZałożona księga wieczysta.\nCena: 79 tyś zł za działkę.\n",
-      "area": 3000,
+      "img": "https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6IjZka215a212bW9vaDItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0._T4jaAFoSksJvXwneOvCcXkC6pDK5I4im7-Wqa-Zy3A/image;s=1280x1024;q=80",
+      "description": "Sprzedam działkę budowlaną położoną we  wsi Berżałowce,  gmina Sejny o powierzchni 1539 m2. Zgodnie z uchwałą Rady Gminy Sejny w sprawie uchwalenia miejscowego planu zagospodarowania przestrzennego działka położona jest w obszarze skupionej zabudowy wsi. Działka zlokalizowana jest 40m od drogi powiatowej nr 1175B i ma kształt prostokąta o orientacyjnych wymiarach 50 m x 30 m, częściowo porośnięta jest drzewkami owocowymi. Okolice działki otaczają  lasy, jeziora, parki krajobrazowe, najbliższe jezioro Aszarin dzieli zaledwie 1 km. Odległość drogowa do Gib-najpopularniejszej miejscowości turystycznej na Sejneńszczyźnie wynosi - 5 km, do Sejn - 10 km.",
+      "area": 1539,
       "unit": "m²"
     },
     {
-      "title": "Piękna działka w miejscowości Daniłowce",
-      "price": 110000,
-      "currency": "zł",
-      "img": "https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Imx5dGlwY3Vmc20yODItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.r4Jc-Uoff4uP2ONhufmAo39NEUH2DWic-sSzad0H3bQ/image;s=1280x1024;q=80",
-      "description": "Posiadam do sprzedaży działkę rolną która jest w trakcie przekształcenia na budowlaną, działka znajduje się w pięknej malowniczej okolicy Daniłowce zdala od zgiełku miejskiego, działka w kształcie prostokątny, 200 metrów do jeziora, plaża ogólno dostępna, możliwość kupna większej działki, w razie pytań proszę dzwonić.",
-      "area": 3000,
-      "unit": "m²"
-    },
-    {
-      "title": "Działka rolno budowlana",
-      "price": 175000,
-      "currency": "zł",
-      "img": "https://ireland.apollo.olxcdn.com:443/v1/files/6tzlgnf2vzmh-PL/image;s=833x522",
-      "description": "Witam sprzedam działkę rolno budowlana o powierzchni 8005m2. Działka położona jest w miejscowości Krucieniszki gmina Krasnopol, jest otoczona lasem. W niedalekiej odległości , znajduje się kilka jezior, lasy, sklep oraz kościół w Smolanach oraz szkoła w Krasnopol u . Wjazd na działkę jest bezpośrednio z drogi. Działka leży bezpośrednio przy rzece Marycha z własną linią brzegową. Cena za metr to 23zł. Więcej informacji pod numerem 78*******24.",
-      "area": 8004,
-      "unit": "m²"
-    },
-    {
-      "title": "Działka budowlana, ziemia rolna, gospodarstwo",
-      "price": 200000,
-      "currency": "zł",
-      "img": "https://ireland.apollo.olxcdn.com:443/v1/files/osx9ifoksy4o2-PL/image;s=341x700",
-      "description": "Sprzedam działkę budowlaną ,gospodarstwo rolne z możliwością zabudowy. Działki znajdują się w gminie Krasnopol, powiat sejneński, woj. podlaskie.\nWydana decyzja o warunkach zabudowy dla działki nr. 376, możliwość budowy domu jednorodzinnego oraz budynku gospodarczego.\nNa działce nr. 377 rodzaj terenu pozwala na wykopanie stawu. \n\nDziałka pod zabudowę przylega do drogi asfaltowej, znajduje się tam również wodociąg oraz linia energetyczna. Ziemia położona w cichym miejscu, w niedalekiej odległości od m. Krasnopol (szkoła, przedszkole, sklepy, bank, poczta, plaża gminna)\nDziałki o numerach 376 i 377 . \nSprzedaję w całości jako gospodarstwo rolne.\nTel. 79*******55\nJeżeli nie odbieram, proszę o wiadomość SMS, oddzwonię.",
-      "area": 45097,
-      "unit": "m²"
-    },
-    {
-      "title": "Sprzedam dzialke",
-      "price": 150000,
-      "currency": "zł",
-      "img": "https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6IjNiZGFvM2FmcnNmNzEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.NtDfFvqSRbpZwAB6ijCn3VLmuxkH9r-8HD-onim_PTE/image;s=1280x1024;q=80",
-      "description": "Działka w kształcie prostokąta,lekko opadająca w stronę drogi,około 10 arów, na działce woda,prąd,stalowe ogrodzenia,przesuwna  brama,przy lesie,na działce drewniany domek z tarasem,kilka drzew -świerk,brzoza sadzona w szpaler,200 metrów od jeziora,cisza ,spokój....proszę pisać lub dzwonić-  ",
-      "area": 1000,
-      "unit": "m²"
-    },
-    {
-      "title": "Las o powierzchni 5.49 ha",
-      "price": 190000,
-      "currency": "zł",
-      "img": "https://ireland.apollo.olxcdn.com:443/v1/files/0rq5b99jy4es1-PL/image;s=2000x1500",
-      "description": "Sprzedam las o łącznej powierzchni 5.49ha. Dwie działki przecina droga gminna. Następne dwie oddziela rzeka. Wiek lasu do 50 lat.\n\nWięcej informacji telefonicznie.",
-      "area": 54900,
-      "unit": "m²"
-    },
-    {
-      "title": "Działka 4.69 ha z linią brzegową jeziora Białego",
-      "price": 990000,
-      "currency": "zł",
-      "img": "https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImE1anoxM2dzeDdrNzEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.VIsbOlmEms7PsHQeC_JGbIZ-Z-7hUuD9tGiOnPn4ABE/image;s=1280x1024;q=80",
-      "description": "Idealna nieruchomość pod inwestycję, możliwość podziału na kilka działek 30-sto arowych ze wspólną plażą.\n\nKOPICZKO NIERUCHOMOŚCI prezentuje piękną, działkę z dostępem do linii brzegowej Jeziora Białego. Jest to urocze miejsce położone w miejscowości Białowierśnie, gmina Giby, powiat Sejny. Działka nr 50 o powierzchni 2,7633 ha  objęta jest Studium uwarunkowań i kierunków zagospodarowania przestrzennego gminy Giby oznaczona symbolem UT/MNU.\nUdział w działce 75 o powierzchni  1,9270 ha objęta jest Studium uwarunkowań i kierunków zagospodarowania przestrzennego gminy Giby oznaczona symbolem UT/MNU.\n Cena nieruchomości 990.000,00 (słownie: dziewięćset dziewięćdziesiąt tys. zł).Profesjonalna bezpłatna pomoc w uzyskaniu najlepszego kredytu hipotecznego w ofercie 13 banków.Zapraszam do biura nieruchomości w Olecka przy ulicy 11 Listopada 2/1UW razie pytań proszę o kontakt KOPICZKO NIERUCHOMOŚCIJan Kopiczkokom. 502110890Olecko, ul. 11 Listopada 2/1UPrezentowana oferta ma charakter informacyjny. Oferta ta nie stanowi oferty handlowej w rozumieniu Kodeksu Cywilnego, ale ma związek z umową pośrednictwa w rozumieniu Ustawy o gospodarce nieruchomościami. Oferta niniejsza prezentowana jest wyłącznie za zgodą właściciela nieruchomości wyrażonej w formie pisemnej.",
-      "area": 46903,
-      "unit": "m²"
-    },
-    {
-      "title": "Gospodarstwo 2,1 ha, 3 budynki - 600 m od jeziora. Suwalszczyzna.",
-      "price": 330000,
-      "currency": "zł",
-      "img": "https://ireland.apollo.olxcdn.com:443/v1/files/k6wev752wed83-PL/image;s=2000x1463",
-      "description": "Zimowe zdjęcia pokazują stan gospodarstwa z zimy 2020 r. Zdjęcia z drobna ukazują okolicę posesji (prawy górny róg foto). Mapka doprowadza na skraj wioski Stabieńszczyzna, 4 km od Sejn. Budynki maja przyłącze 220V, studnia jest z woda gospodarczą, miejsce zaciszne, najbliższy sąsiad 300 m, dom otoczony polami. Ziemia rolna 2.1 ha klasy 5 i 6, non stop uprawiana. kawałek lasu w lesie krasnopolskim.",
-      "area": 2100000,
-      "unit": "m²"
-    },
-    {
+      "link": "https://www.otodom.pl/pl/oferta/urocze-siedlisko-blisko-jeziora-ID4dhrX.html?",
       "title": "Urocze siedlisko blisko jeziora",
       "price": 319000,
       "currency": "zł",
@@ -91,42 +31,97 @@
       "unit": "m²"
     },
     {
-      "title": "Sprzedam działkę budowlaną, uzbrojoną z linią brzegową.",
-      "price": 288000,
+      "link": "https://www.olx.pl/d/oferta/zegary-gm-sejny-dzialka-budowlana-z-linia-brzegowa-CID3-IDCLBY9.html#8e576322d4",
+      "title": "Żegary gm. Sejny. Działka budowlana z linia brzegową",
+      "price": 410000,
       "currency": "zł",
-      "img": "https://ireland.apollo.olxcdn.com:443/v1/files/85dqk1ovedxi3-PL/image;s=750x992",
-      "description": "Sprzedam działkę budowlaną , uzbrojoną z linia brzegową . Położona jest w Sumowie koło Sejn. Powierzchnia to 0,2394 ha. Cena za metr kwadratowy 120zl. Nr.dzialki  59/3.\n\nhttps://geoportal360.pl/map/?src=adwords&utm_source=google&utm_medium=cpc&utm_campaign=SN-Geo&gclid=CjwKCAjwp_GJBhBmEiwALWBQk6uTVvyjihPcudfv_Wlgsdx5Q6LPxcBTQzPhuifMxs0BlNscz7q6lxoCZ-cQAvD_BwE#l:54.08981,23.28389,18;p:MjAwOTA1XzIuMDAyNi41OS8z",
-      "area": 2394,
+      "img": "https://ireland.apollo.olxcdn.com:443/v1/files/7xlpjas7g6k23-PL/image;s=1024x768",
+      "description": "Przepiękna działka budowlana w miejscowości Żegary nad jeziorem Sztabinki. \nDziałka posiada własną linię brzegową.\nPołozona miedzy dwoma jeziorami. \nDo j. Gaładuś 100m.\nZostala wyrównana i posiana trawa. \nDziałka przy drodze asfaltowej, w ktorej znajduje się wodociag oraz prąd. \nZgodnie z planem zagospodarowania możliwosc budowy domu, siedliska. \n\nDziałka sklada sie z trzech połaczonych ze soba działek co widać na mapie.\nZdjecia jeziora z lotu ptaka rowniez załaczone.\n\nWielkośc działki 4241m2.\n\nDo miejscowości Sejny 6km, do przejścia granicznego Ogrodniki 3km.\n\nZachęcam do obejrzenia.",
+      "area": 4241,
       "unit": "m²"
     },
     {
-      "title": "Działka w spokojnej okolicy Żegary",
-      "price": 180000,
+      "link": "https://www.otodom.pl/pl/oferta/krasnopol-dzialki-przy-lesie-i-jeziorze-ID4dqHe.html?",
+      "title": "Krasnopol - działki przy lesie i jeziorze",
+      "price": 79000,
       "currency": "zł",
-      "img": "https://ireland.apollo.olxcdn.com:443/v1/files/qb9elgwyde5o1-PL/image;s=1000x662",
-      "description": "Sprzedam działkę rolną w miejscowości Żegary. Dla zdecydowanej osoby działka zostanie przekształcona na budowlana. Działka ma powierzchnie ok.40 Ar\nNa działce jest prąd oraz woda.\nWyjazd bezpośrednio na drogę asfaltową. W pobliżu działki znajdują się trzy jeziora. Okolica cicha i spokojna.\nDla kupującego dodam w ten samej cenie  działkę obok o powierzchni  ok.15 Ar \nWięcej informacji udzielę telefonicznie",
-      "area": 4000,
+      "img": "https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImxvcXliYXNpemczNjMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.z8jqFBUF1MbTPt8RXA2i3pem1lN0vFRcgBexzh9dnZ4/image;s=1280x1024;q=80",
+      "description": "Na sprzedaż siedem działek o powierzchni 3000 m2 każda, położone koło jeziora w gminie Krasnopol. Nieruchomości w kształcie prostokątów, położone tuż przy lesie.\nNabywca działki pierwszej dodatkowo w cenie otrzymuje działkę leśną o powierzchni 1100 m2.\nZ kompleksu do plaży gminnej nad jeziorem około 100 m.\nTeren działek równy, wzdłuż drogi dojazdowej przebiega sieć elektroenergetyczna.\nW okolicy dominuje luźna zabudowa siedliskowa, nad jeziorami rekreacyjna.\nZałożona księga wieczysta.\nCena: 79 tyś zł za działkę.\n",
+      "area": 3000,
       "unit": "m²"
     },
     {
-      "title": "Działka 3,45ha z lasem , linia brzegowa rzeki",
-      "price": 125000,
+      "link": "https://www.otodom.pl/pl/oferta/piekna-dzialka-w-miejscowosci-danilowce-ID474th.html?",
+      "title": "Piękna działka w miejscowości Daniłowce",
+      "price": 110000,
       "currency": "zł",
-      "img": "https://ireland.apollo.olxcdn.com:443/v1/files/jimksajsfyvp3-PL/image;s=1758x867",
-      "description": "Sprzedam działkę rolną, która znajduje się w miejscowości Gryszkańce, gm. Sejny. \nNr działki 25/1. Założona księga wieczysta. Powierzchnia 3,45 ha w tym  2,13 ha działki porośnięte jest lasem, a pozostałą część stanowi łąka o powierzchni 1,32 ha. Na odcinku około 160 m graniczy ona z rzeką Marychą. Działka nie posiada miejscowego planu zagospodarowania przestrzennego. \nOdległość od miasta Sejny to zaledwie 4km, oraz pół godziny od Suwałk i Augustowa.",
-      "area": 34500,
+      "img": "https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Imx5dGlwY3Vmc20yODItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.r4Jc-Uoff4uP2ONhufmAo39NEUH2DWic-sSzad0H3bQ/image;s=1280x1024;q=80",
+      "description": "Posiadam do sprzedaży działkę rolną która jest w trakcie przekształcenia na budowlaną, działka znajduje się w pięknej malowniczej okolicy Daniłowce zdala od zgiełku miejskiego, działka w kształcie prostokątny, 200 metrów do jeziora, plaża ogólno dostępna, możliwość kupna większej działki, w razie pytań proszę dzwonić.",
+      "area": 3000,
       "unit": "m²"
     },
     {
-      "title": "Krasnopol - dwie działki koło jeziora",
-      "price": 95000,
+      "link": "https://www.olx.pl/d/oferta/dzialka-rolno-budowlana-CID3-IDLlNFu.html#8e576322d4",
+      "title": "Działka rolno budowlana",
+      "price": 175000,
       "currency": "zł",
-      "img": "https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InRqcWxsMWIybmw5ZzItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.Cto0L_j2PeCFMtr9kY3jjgLywoAhz5qTOe-Y4pIjB6Y/image;s=1280x1024;q=80",
-      "description": "Na sprzedaż dwie działki o powierzchni 3400 m2 każda, położone tuż obok Jeziora Boczniel,\nw miejscowości Czarna Buchta. Działki w kształcie regularnych prostokątów.\nMożliwość uzyskania warunków zabudowy (na życzenie, przy zakupie nieruchomości właściciel przedkłada warunki zabudowy dla nowego nabywcy).\nW odległości około 200 m plaża gminna. Za działką tereny leśne.\nDoprowadzona sieć elektroenergetyczna.\nZałożona księga wieczysta.\n",
-      "area": 3400,
+      "img": "https://ireland.apollo.olxcdn.com:443/v1/files/6tzlgnf2vzmh-PL/image;s=833x522",
+      "description": "Witam sprzedam działkę rolno budowlana o powierzchni 8005m2. Działka położona jest w miejscowości Krucieniszki gmina Krasnopol, jest otoczona lasem. W niedalekiej odległości , znajduje się kilka jezior, lasy, sklep oraz kościół w Smolanach oraz szkoła w Krasnopol u . Wjazd na działkę jest bezpośrednio z drogi. Działka leży bezpośrednio przy rzece Marycha z własną linią brzegową. Cena za metr to 23zł. Więcej informacji pod numerem 78*******24.",
+      "area": 8004,
       "unit": "m²"
     },
     {
+      "link": "https://www.olx.pl/d/oferta/dzialka-budowlana-ziemia-rolna-gospodarstwo-CID3-IDF41Pf.html#8e576322d4",
+      "title": "Działka budowlana, ziemia rolna, gospodarstwo",
+      "price": 200000,
+      "currency": "zł",
+      "img": "https://ireland.apollo.olxcdn.com:443/v1/files/osx9ifoksy4o2-PL/image;s=341x700",
+      "description": "Sprzedam działkę budowlaną ,gospodarstwo rolne z możliwością zabudowy. Działki znajdują się w gminie Krasnopol, powiat sejneński, woj. podlaskie.\nWydana decyzja o warunkach zabudowy dla działki nr. 376, możliwość budowy domu jednorodzinnego oraz budynku gospodarczego.\nNa działce nr. 377 rodzaj terenu pozwala na wykopanie stawu. \n\nDziałka pod zabudowę przylega do drogi asfaltowej, znajduje się tam również wodociąg oraz linia energetyczna. Ziemia położona w cichym miejscu, w niedalekiej odległości od m. Krasnopol (szkoła, przedszkole, sklepy, bank, poczta, plaża gminna)\nDziałki o numerach 376 i 377 . \nSprzedaję w całości jako gospodarstwo rolne.\nTel. 79*******55\nJeżeli nie odbieram, proszę o wiadomość SMS, oddzwonię.",
+      "area": 45097,
+      "unit": "m²"
+    },
+    {
+      "link": "https://www.otodom.pl/pl/oferta/sprzedam-dzialke-ID4dntq.html?",
+      "title": "Sprzedam dzialke",
+      "price": 150000,
+      "currency": "zł",
+      "img": "https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6IjNiZGFvM2FmcnNmNzEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.NtDfFvqSRbpZwAB6ijCn3VLmuxkH9r-8HD-onim_PTE/image;s=1280x1024;q=80",
+      "description": "Działka w kształcie prostokąta,lekko opadająca w stronę drogi,około 10 arów, na działce woda,prąd,stalowe ogrodzenia,przesuwna  brama,przy lesie,na działce drewniany domek z tarasem,kilka drzew -świerk,brzoza sadzona w szpaler,200 metrów od jeziora,cisza ,spokój....proszę pisać lub dzwonić-  ",
+      "area": 1000,
+      "unit": "m²"
+    },
+    {
+      "link": "https://www.olx.pl/d/oferta/las-o-powierzchni-5-49-ha-CID3-IDKPb9i.html#8e576322d4",
+      "title": "Las o powierzchni 5.49 ha",
+      "price": 190000,
+      "currency": "zł",
+      "img": "https://ireland.apollo.olxcdn.com:443/v1/files/0rq5b99jy4es1-PL/image;s=2000x1500",
+      "description": "Sprzedam las o łącznej powierzchni 5.49ha. Dwie działki przecina droga gminna. Następne dwie oddziela rzeka. Wiek lasu do 50 lat.\n\nWięcej informacji telefonicznie.",
+      "area": 54900,
+      "unit": "m²"
+    },
+    {
+      "link": "https://www.otodom.pl/pl/oferta/dzialka-4-69-ha-z-linia-brzegowa-jeziora-bialego-ID4cK2R.html?",
+      "title": "Działka 4.69 ha z linią brzegową jeziora Białego",
+      "price": 990000,
+      "currency": "zł",
+      "img": "https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImE1anoxM2dzeDdrNzEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.VIsbOlmEms7PsHQeC_JGbIZ-Z-7hUuD9tGiOnPn4ABE/image;s=1280x1024;q=80",
+      "description": "Idealna nieruchomość pod inwestycję, możliwość podziału na kilka działek 30-sto arowych ze wspólną plażą.\n\nKOPICZKO NIERUCHOMOŚCI prezentuje piękną, działkę z dostępem do linii brzegowej Jeziora Białego. Jest to urocze miejsce położone w miejscowości Białowierśnie, gmina Giby, powiat Sejny. Działka nr 50 o powierzchni 2,7633 ha  objęta jest Studium uwarunkowań i kierunków zagospodarowania przestrzennego gminy Giby oznaczona symbolem UT/MNU.\nUdział w działce 75 o powierzchni  1,9270 ha objęta jest Studium uwarunkowań i kierunków zagospodarowania przestrzennego gminy Giby oznaczona symbolem UT/MNU.\n Cena nieruchomości 990.000,00 (słownie: dziewięćset dziewięćdziesiąt tys. zł).Profesjonalna bezpłatna pomoc w uzyskaniu najlepszego kredytu hipotecznego w ofercie 13 banków.Zapraszam do biura nieruchomości w Olecka przy ulicy 11 Listopada 2/1UW razie pytań proszę o kontakt KOPICZKO NIERUCHOMOŚCIJan Kopiczkokom. 502110890Olecko, ul. 11 Listopada 2/1UPrezentowana oferta ma charakter informacyjny. Oferta ta nie stanowi oferty handlowej w rozumieniu Kodeksu Cywilnego, ale ma związek z umową pośrednictwa w rozumieniu Ustawy o gospodarce nieruchomościami. Oferta niniejsza prezentowana jest wyłącznie za zgodą właściciela nieruchomości wyrażonej w formie pisemnej.",
+      "area": 46903,
+      "unit": "m²"
+    },
+    {
+      "link": "https://www.olx.pl/d/oferta/gospodarstwo-2-1-ha-3-budynki-600-m-od-jeziora-suwalszczyzna-CID3-IDKXlFu.html#8e576322d4",
+      "title": "Gospodarstwo 2,1 ha, 3 budynki - 600 m od jeziora. Suwalszczyzna.",
+      "price": 330000,
+      "currency": "zł",
+      "img": "https://ireland.apollo.olxcdn.com:443/v1/files/k6wev752wed83-PL/image;s=2000x1463",
+      "description": "Zimowe zdjęcia pokazują stan gospodarstwa z zimy 2020 r. Zdjęcia z drobna ukazują okolicę posesji (prawy górny róg foto). Mapka doprowadza na skraj wioski Stabieńszczyzna, 4 km od Sejn. Budynki maja przyłącze 220V, studnia jest z woda gospodarczą, miejsce zaciszne, najbliższy sąsiad 300 m, dom otoczony polami. Ziemia rolna 2.1 ha klasy 5 i 6, non stop uprawiana. kawałek lasu w lesie krasnopolskim.",
+      "area": 2100000,
+      "unit": "m²"
+    },
+    {
+      "link": "https://www.olx.pl/d/oferta/sprzedam-dzialke-z-warunkami-zabudowy-CID3-IDJdRNm.html#8e576322d4",
       "title": "Sprzedam działkę z warunkami zabudowy",
       "price": 70000,
       "currency": "zł",
@@ -136,6 +131,7 @@
       "unit": "m²"
     },
     {
+      "link": "https://www.olx.pl/d/oferta/dzialka-rekreacyjna-z-linia-brzegowa-jeziora-CID3-IDLgt34.html#8e576322d4",
       "title": "Działka rekreacyjna z linia brzegową JEZIORA",
       "price": 120000,
       "currency": "zł",
@@ -145,6 +141,7 @@
       "unit": "m²"
     },
     {
+      "link": "https://www.olx.pl/d/oferta/dzialka-rekreacyjno-budowlana-blisko-jezior-i-lasu-CID3-IDLgsoH.html#8e576322d4",
       "title": "Działka rekreacyjno-BUDOWLANA blisko Jezior i Lasu",
       "price": 50000,
       "currency": "zł",
@@ -154,6 +151,7 @@
       "unit": "m²"
     },
     {
+      "link": "https://www.olx.pl/d/oferta/dzialka-lesna-wigrance-1-1457-ha-CID3-IDKFgGS.html#8e576322d4",
       "title": "Działka leśna Wigrańce 1,1457 ha",
       "price": 95000,
       "currency": "zł",
@@ -163,6 +161,7 @@
       "unit": "m²"
     },
     {
+      "link": "https://www.olx.pl/d/oferta/dzialki-rolne-pockuny-1-0550-ha-CID3-IDKFhGd.html#8e576322d4",
       "title": "Działki rolne Poćkuny, 1,0550 ha",
       "price": 54000,
       "currency": "zł",
@@ -172,6 +171,7 @@
       "unit": "m²"
     },
     {
+      "link": "https://www.olx.pl/d/oferta/sprzedam-dzialke-CID3-IDLeooS.html#8e576322d4",
       "title": "Sprzedam działkę",
       "price": 120000,
       "currency": "zł",
@@ -181,6 +181,7 @@
       "unit": "m²"
     },
     {
+      "link": "https://www.otodom.pl/pl/oferta/dzialka-3-45-ha-puszcza-augustowska-zelwa-ID47jCL.html?",
       "title": "Działka 3,45 ha Puszcza Augustowska - Zelwa",
       "price": 259000,
       "currency": "zł",
