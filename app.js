@@ -6,7 +6,7 @@ const { html } = require("cheerio/lib/api/manipulation");
 const baseUrl =
   "https://www.olx.pl/nieruchomosci/dzialki/sprzedaz/sejny/?search%5Bdist%5D=10)";
 
-const Scrapper = async () => {
+const Scrapper = async (urlGiven) => {
   let links = [];
   let titles = [];
   let prices = [];
@@ -64,8 +64,8 @@ const Scrapper = async () => {
     });
   };
 
-  const getOfferLinks = async () => {
-    const html = await getHtml(baseUrl);
+  const getOfferLinks = async (urlGiven) => {
+    const html = await getHtml(urlGiven);
     const $ = cheerio.load(html);
 
     $(SELECTORS_OLX.wrapper).each((i, el) => {
@@ -74,7 +74,7 @@ const Scrapper = async () => {
     });
     return links;
   };
-  const urls = await getOfferLinks();
+  const urls = await getOfferLinks(urlGiven);
 
   const getOfferDetails = async (url) => {
     const html = await getHtml(url);
@@ -96,7 +96,13 @@ const Scrapper = async () => {
     return Promise.all(requests);
   };
   const result = await getAllOffers(urls);
-  await saveOffer(result);
+  // await saveOffer(result);
+  // console.log(result);
+  return result;
 };
 
-Scrapper();
+Scrapper(
+  "https://www.olx.pl/nieruchomosci/dzialki/sprzedaz/sejny/?search%5Bdist%5D=10)"
+);
+
+module.exports = { Scrapper };

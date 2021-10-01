@@ -1,24 +1,27 @@
 const express = require("express");
 const router = express.Router();
 const Offer = require("./models/Offer.js");
+const scrapper = require("./app");
 
 router.post("/", async (req, res) => {
-  const offer = new Offer({
-    link: req.body.link,
-    title: req.body.title,
-    price: req.body.price,
-    currency: req.body.currency,
-    img: req.body.img,
-    description: req.body.description,
-    area: req.body.area,
-    unit: req.body.unit,
+  const result = await scrapper.Scrapper(req.body.link);
+  result.map((x) => {
+    x = new Offer({
+      link: x.link,
+      title: x.title,
+      price: x.price,
+      currency: x.currency,
+      img: x.img,
+      description: x.description,
+      area: x.area,
+      unit: x.unit,
+    });
+    try {
+      const savedOffer = x.save();
+      res.json(savedOffer);
+    } catch (err) {
+      res.json(console.log(err));
+    }
   });
-  try {
-    const savedOffer = await offer.save();
-    res.json(savedOffer);
-  } catch (err) {
-    res.json(console.log(err));
-  }
 });
-
 module.exports = router;
