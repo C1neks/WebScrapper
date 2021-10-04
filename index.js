@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 
 app.use("/pull", pullRoute);
 app.use("/offers", offersRoute);
+
 mongoose.connect(
   "mongodb+srv://cinek:marcin12@cluster0.flguz.mongodb.net/Cluster0?retryWrites=true&w=majority",
   () => console.log("connected")

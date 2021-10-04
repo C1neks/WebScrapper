@@ -2,16 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Offer = require("./models/Offer.js");
 
-router.get("/", async (req, res) => {
-  try {
-    const offers = await Offer.find();
-    res.json(offers);
-  } catch (err) {
-    res.json(console.log(err));
-  }
-});
-
-router.get("/sorting", function (req, res) {
+router.get("/", function (req, res) {
   Offer.find({})
     .sort(req.query.sort)
     .exec(function (err, offers) {
@@ -21,6 +12,15 @@ router.get("/sorting", function (req, res) {
         res.json({ offers: offers });
       }
     });
+});
+
+router.get("/", async (req, res) => {
+  try {
+    const offers = await Offer.find();
+    res.json(offers);
+  } catch (err) {
+    res.json(console.log(err));
+  }
 });
 
 router.get("/:offerId", async (req, res) => {
