@@ -3,8 +3,10 @@ const router = express.Router();
 const Offer = require("./models/Offer.js");
 
 router.get("/", function (req, res) {
+  console.log(req.query);
+  const isDescOrAsc = "asc" in req.query ? "asc" : "desc";
   Offer.find({})
-    .sort(req.query.sort)
+    .sort({ [req.query.sort]: isDescOrAsc })
     .exec(function (err, offers) {
       if (err) {
         console.log(err);
@@ -12,15 +14,6 @@ router.get("/", function (req, res) {
         res.json({ offers: offers });
       }
     });
-});
-
-router.get("/", async (req, res) => {
-  try {
-    const offers = await Offer.find();
-    res.json(offers);
-  } catch (err) {
-    res.json(console.log(err));
-  }
 });
 
 router.get("/:offerId", async (req, res) => {
